@@ -174,9 +174,11 @@ Class ("paella.VideoContainerBase", paella.DomNode,{
 			.then(function(currentTime) {
 				if (!paused || This._force) {
 					This._force = false;
+					var realCurrentTime = this._trimming.enabled ? (currentTime - this._trimming.start):currentTime;                    
 					paella.events.trigger(paella.events.timeupdate, {
 						videoContainer: This,
 						currentTime: currentTime,
+                        realCurrentTime: realCurrentTime,
 						duration: duration
 					});
 				}

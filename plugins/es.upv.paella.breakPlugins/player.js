@@ -27,12 +27,12 @@ Class ("paella.plugins.BreaksPlayerPlugin",paella.EventDrivenPlugin,{
 		for (var i=0; i<this.breaks.length; ++i) {
 			a = this.breaks[i];
 
-			if (a.s<params.currentTime && a.e>params.currentTime) {
+			if (a.s<params.realCurrentTime && a.e>params.realCurrentTime) {
                             if(this.areBreaksClickable())
                                 this.avoidBreak(a);
                             else
                                 this.showBreaks(a);
-			} else if (a.s.toFixed(0) == params.currentTime.toFixed(0)){
+			} else if (a.s.toFixed(0) == params.realCurrentTime.toFixed(0)){
 				this.avoidBreak(a);
 			}
 		}
@@ -40,7 +40,7 @@ Class ("paella.plugins.BreaksPlayerPlugin",paella.EventDrivenPlugin,{
 			for (var key in this.visibleBreaks) {
 				if (typeof(a)=='object') {
 					a = this.visibleBreaks[key];
-					if (a && (a.s>=params.currentTime || a.e<=params.currentTime)) {
+					if (a && (a.s>=params.realCurrentTime || a.e<=params.realCurrentTime)) {
 						this.removeBreak(a);
 					}
 				}
