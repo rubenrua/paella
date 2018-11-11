@@ -25,6 +25,7 @@
       { "factory":"RTMPVideoFactory", "enabled":true },
       { "factory":"ImageVideoFactory", "enabled":true },
       { "factory":"YoutubeVideoFactory", "enabled":true },
+      { "factory":"AsciinemaVideoFactory", "enabled":true },
       { "factory":"Video360ThetaFactory", "enabled":true },
       { "factory":"Video360Factory", "enabled":true }
     ],
@@ -103,9 +104,9 @@
         ]
       },
       "es.upv.paella.legalPlugin": {
-		"enabled": true,
-		    "label": "Legal info",
-		    "position": "right",
+        "enabled": true,
+            "label": "Legal info",
+            "position": "right",
         "legalUrl": "https://en.wikipedia.org/wiki/General_Data_Protection_Regulation"
       },
 

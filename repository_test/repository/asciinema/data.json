@@ -1,0 +1,21 @@
+{
+    "metadata": {
+        "duration": 887,
+        "title": "ASCIINEMA demo"
+    },
+    "streams": [
+        {
+            "sources": {
+                "asciinema": [
+                    {
+                        "src": "emacs.cast",
+                        "mimetype": "application/octet-stream"
+                    }]
+            },
+            "preview": "",
+            "content":"presenter"
+        }
+    ],
+    "frameList": [
+    ]
+}
